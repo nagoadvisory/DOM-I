@@ -42,8 +42,19 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Add Circular Image
+let ctaImage = document.querySelector('#cta-img');
+ctaImage.setAttribute('src',siteContent["cta"]["img-src"])
 
 //Selecting the Nav Bar
+const navBar = document.querySelectorAll('nav a');
+let navArray = Array.from(navBar)
+navBar[0].textContent=siteContent['nav']['nav-item-1'];
+navBar[1].textContent=siteContent['nav']['nav-item-2'];
+navBar[2].textContent=siteContent['nav']['nav-item-3'];
+navBar[3].textContent=siteContent['nav']['nav-item-4'];
+navBar[4].textContent=siteContent['nav']['nav-item-5'];
+navBar[5].textContent=siteContent['nav']['nav-item-6'];
+
 
 // Creating DOM is Awesome
 let h1Header = document.querySelector('h1');
@@ -54,8 +65,9 @@ let ctaButton = document.querySelector('button');
 ctaButton.textContent = siteContent["cta"]["button"];
 
 // Add coding snippet image on screen
-let ctaImage = document.querySelector('#cta-img');
-ctaImage.setAttribute('src',siteContent["cta"]["img-src"])
+let codingSnippet = document.getElementById("middle-img");
+codingSnippet.setAttribute('src',siteContent['main-content']['middle-img-src']);
+
 
 // 2 items above snippet
 let featuresHeader = document.querySelector(".top-content div:nth-child(1) h4")
